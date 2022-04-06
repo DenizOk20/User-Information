@@ -7,14 +7,17 @@ public class Main {
 
         Name name = new Name();
         Job job = new Job();
+        Salary salary = new Salary();
         Scanner answer = new Scanner(System.in);
         ArrayList<String> names = new ArrayList<String>();
         ArrayList<String> jobs = new ArrayList<String>();
+        ArrayList<Integer> salaries = new ArrayList<Integer>();
 
         int a = 1;
         while(a ==1){
             names.add(name.getName() + "\n");
-            jobs.add(job.getJob());
+            jobs.add(job.getJob()+ "\n");
+            salaries.add(salary.salaryInformation());
             System.out.print("Print 1 if you add a new user");
             int Answer = answer.nextInt();
             a = Answer;
@@ -25,14 +28,9 @@ public class Main {
 
         for(int i = 0;i<names.size();i++) {
 
-            System.out.print("Name:" + names.get(i) + "Job:" +jobs.get(i));
+            System.out.print("Name:" + names.get(i) + "Job:" +jobs.get(i) + "Salary:" + salaries.get(i));
             System.out.println("\n");
         }
-
-
-
-
-
 
     }
 }
